@@ -359,7 +359,7 @@ class _EditorScreenState extends State<EditorScreen> {
               ? Expanded(
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                      vertical: 16,
+                      vertical: 8,
                       horizontal: 8,
                     ),
                     color: Colors.grey.shade50,

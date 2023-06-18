@@ -1,4 +1,4 @@
-# ocr_editior
+# NoteSnap browser/mobile app
 
 A new Flutter project.
 

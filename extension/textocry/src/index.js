@@ -12,7 +12,7 @@ const firebaseConfig = {
     messagingSenderId: "905982905609",
     appId: "1:905982905609:web:5983a249927af72e2f97d8",
     measurementId: "G-5567C7YB5S"
-  };
+};
   
 firebase.initializeApp(firebaseConfig);
 
@@ -28,8 +28,6 @@ function handleFirebaseAuth() {
         console.error(`Error signing in: ${error}`);
     });
 }
-
-
 
 function updateDateToFirebase(data) {
     chrome.storage.sync.get((config) => {
@@ -150,7 +148,6 @@ function handleEvents() {
         return true
     })
 }
-
 
 
 function inject(tab) {

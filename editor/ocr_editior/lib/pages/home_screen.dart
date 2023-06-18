@@ -2,7 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:ocr_editior/models/notes.dart';
 import 'package:ocr_editior/pages/editor_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:ocr_editior/pages/sign_in_screen.dart';
 import 'package:ocr_editior/services/notes_services.dart';
+import 'package:ocr_editior/widgets/confirm_dialog.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -31,6 +33,24 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void _showSignOutDailog() {
+    showDialog(
+      context: context,
+      builder: (_) {
+        return ConfirmDialog(
+          title: 'Are you sure ?',
+          body: 'Do you want to log-out',
+          onSuccess: () async {
+            await FirebaseAuth.instance.signOut();
+            Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (context) => SignInScreen()),
+                (Route<dynamic> route) => false);
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
             fontFamily: 'pacifico',
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: _showSignOutDailog,
+            icon: Icon(Icons.logout_rounded),
+          )
+        ],
       ),
       body: FutureBuilder(
         builder: (context, snapshot) {

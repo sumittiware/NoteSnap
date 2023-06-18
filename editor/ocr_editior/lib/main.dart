@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ocr_editior/config.dart';
 import 'package:ocr_editior/pages/sign_in_screen.dart';
-import 'package:ocr_editior/widgets/share_dialog.dart';
 
 import 'pages/home_screen.dart';
 
