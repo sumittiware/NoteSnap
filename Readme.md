@@ -28,6 +28,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any inquiries or feedback, please contact the project team at [tiwaresumit143@gmail.com].
 
-Feel free to visit our website [website](https://fire-alarm-system-2a104.web.app/#/) for more information.
+Feel free to visit our [website](https://fire-alarm-system-2a104.web.app/#/) for more information.
 
 Thank you for using Notesnap! We hope it enhances your note-taking experience.
